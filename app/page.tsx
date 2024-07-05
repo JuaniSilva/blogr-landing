@@ -1,10 +1,7 @@
-import BgPatternCircles from '@/components/BgPatternCircles';
 import BgPatternMobile from '@/components/BgPatternMobile';
-import BlogrLogo from '@/components/BlogrLogo';
 import Button from '@/components/Button';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import IllustrationEditorMobile from '@/components/IllustrationEditorMobile';
 
 export default function Home() {
   return (
@@ -31,10 +28,15 @@ export default function Home() {
       </section>
       <section className='mt-[105px] px-10 text-center'>
         <h3 className='text-2xl font-bold'>Designed for the future</h3>
-        <img className='mt-12' src='./images/illustration-editor-mobile.svg' />
+        <figure className='mx-auto w-fit'>
+          <img
+            className='max-w-100 mt-16'
+            src='./images/illustration-editor-mobile.svg'
+          />
+        </figure>
       </section>
       <section className='mt-14 px-10 text-center'>
-        <h3 className='mb-8 text-2xl font-bold'>
+        <h3 className='mb-8 text-2xl font-bold text-primary-dark-blue'>
           Introducing an <br /> extensible editor
         </h3>
         <p>
@@ -46,7 +48,9 @@ export default function Home() {
         </p>
       </section>
       <section className='mt-14 px-10 text-center'>
-        <h3 className='mb-8 text-2xl font-bold'>Robust content management</h3>
+        <h3 className='mb-8 text-2xl font-bold text-primary-dark-blue'>
+          Robust content management
+        </h3>
         <p>
           Flexible content management enables users to easily move through
           posts. Increase the usability of your blog by adding customized
@@ -55,10 +59,12 @@ export default function Home() {
         </p>
       </section>
       <div className='relative'>
-        <img
-          className='absolute -top-[225px] left-1/2 z-20 mt-12 -translate-x-1/2'
-          src='./images/illustration-phones.svg'
-        />
+        <figure className='absolute -top-[225px] left-1/2 z-20 mt-12 w-full -translate-x-1/2'>
+          <img
+            src='./images/illustration-phones.svg'
+            className='mx-auto max-w-[375px]'
+          />
+        </figure>
         <section className='relative mt-[275px] overflow-hidden rounded-bl-[90px] rounded-tr-[90px] bg-gradient-to-b from-gradient-dark-blue to-gradient-very-dark-blue px-8 pb-[120px] pt-[230px] text-center text-white'>
           <img
             src='./images/bg-pattern-circles.svg'
@@ -77,8 +83,16 @@ export default function Home() {
           </div>
         </section>
       </div>
+      <figure className='mx-auto w-fit'>
+        <img
+          className='max-w-100 mt-16'
+          src='./images/illustration-laptop-mobile.svg'
+        />
+      </figure>
       <section className='mt-20 px-10 text-center'>
-        <h3 className='mb-8 text-2xl font-bold'>Free, open, simple</h3>
+        <h3 className='mb-8 text-2xl font-bold text-primary-dark-blue'>
+          Free, open, simple
+        </h3>
         <p>
           Blogr is a free and open source application backed by a large
           community of helpful developers. It supports features such as code
@@ -88,7 +102,9 @@ export default function Home() {
         </p>
       </section>
       <section className='mb-[100px] mt-20 px-10 text-center'>
-        <h3 className='mb-8 text-2xl font-bold'>Powerful tooling</h3>
+        <h3 className='mb-8 text-2xl font-bold text-primary-dark-blue'>
+          Powerful tooling
+        </h3>
         <p>
           Batteries included. We built a simple and straightforward CLI tool
           that makes customization and deployment a breeze, but capable of
