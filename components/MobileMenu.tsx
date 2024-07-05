@@ -24,39 +24,40 @@ export default function MobileMenu() {
         className={`${isOpen ? 'translate-y-0' : ''} absolute left-1/2 top-[125px] z-50 flex w-[90%] -translate-x-1/2 -translate-y-[200%] flex-col gap-4 rounded bg-white px-6 py-8 text-center font-bold text-primary-dark-blue shadow transition-all duration-500 ease-in-out`}
       >
         <ul className='space-y-5'>
-          {navItems.map((item) => {
-            return (
-              <li key={item.key}>
-                <span
+          {navItems.map((item) => (
+            <li key={item.key}>
+              <button
+                className={cn(
+                  'inline-flex cursor-pointer items-center gap-2 transition-colors',
+                  selectedMenu === item.key && 'text-nav-menu-text'
+                )}
+                onClick={() => toggleMenu(item.key)}
+              >
+                {item.label}
+                <ArrowIcon
                   className={cn(
-                    'inline-flex cursor-pointer items-center gap-2 transition-colors',
-                    selectedMenu === item.key && 'text-nav-menu-text'
+                    'transition-all',
+                    selectedMenu === item.key ? 'rotate-180' : 'rotate-0'
                   )}
-                  onClick={() => toggleMenu(item.key)}
-                >
-                  {item.label}
-                  <ArrowIcon
-                    className={cn(
-                      'transition-all',
-                      selectedMenu === item.key ? 'rotate-180' : 'rotate-0'
-                    )}
-                  />
-                </span>
-                <ul
-                  className={cn(
-                    'bg-nav-menu text-nav-menu-text mt-6 hidden w-full space-y-4 rounded py-7',
-                    selectedMenu === item.key && 'block'
-                  )}
-                >
+                />
+              </button>
+              <div
+                data-state={selectedMenu === item.key ? 'open' : 'closed'}
+                className={cn(
+                  'bg-nav-menu text-nav-menu-text grid w-full grid-rows-[0fr] rounded transition-all',
+                  selectedMenu === item.key && 'mt-6 grid grid-rows-[1fr] py-7'
+                )}
+              >
+                <ul className='space-y-4 overflow-hidden'>
                   {item.subItems.map((subItem) => (
                     <li key={subItem.key}>
                       <a href={subItem.to}>{subItem.label}</a>
                     </li>
                   ))}
                 </ul>
-              </li>
-            );
-          })}
+              </div>
+            </li>
+          ))}
         </ul>
         <span className='h-px w-full shrink-0 bg-neutral-grayish-blue'></span>
         <div className='flex flex-col gap-4'>
