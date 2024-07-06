@@ -9,13 +9,11 @@ export default function Home() {
       <Header />
       <section className='bg-pattern-mobile lg:bg-pattern-desktop lg:bg-pattern-desktop-position bg-pattern-mobile-position relative flex flex-col items-center overflow-hidden rounded-bl-[120px] px-10 pb-[155px] pt-[200px] text-center text-white'>
         <div className='relative'>
-          <h2 className='text-heading-2 mb-6 font-bold'>
-            A modern
-            <br className='lg:hidden' />
-            publishing platform
-          </h2>
+          <h1 className='text-heading-1 mx-auto mb-6 max-w-[14ch] font-bold lg:max-w-none'>
+            A modern publishing platform
+          </h1>
           <p>Grow your audience and build your online brand with Blogr.</p>
-          <div className='mx-auto mt-12 flex gap-4'>
+          <div className='mx-auto mt-12 flex gap-4 lg:max-w-[290px]'>
             <Button className='flex-1 px-4' variant='secondary'>
               Start for Free
             </Button>
@@ -25,8 +23,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='relative mt-[105px] px-10 text-center lg:mx-auto lg:mb-[120px] lg:mt-40 lg:max-w-[1110px]'>
-        <h2 className='text-heading-2 font-bold'>Designed for the future</h2>
+      <section className='relative mt-[105px] px-10 text-center lg:mx-auto lg:mb-[120px] lg:mt-40 lg:max-w-[1110px] lg:px-0'>
+        <h2 className='text-heading-2 font-bold text-primary-dark-blue lg:mb-[114px]'>
+          Designed for the future
+        </h2>
         <div className='gap-8 lg:flex lg:flex-row-reverse'>
           <div className='mx-auto flex h-full w-full flex-1 shrink-0 lg:mx-0'>
             <figure>
@@ -35,7 +35,7 @@ export default function Home() {
                 src='./images/illustration-editor-mobile.svg'
               />
               <img
-                className='mt-16 hidden lg:absolute lg:-right-[450px] lg:-top-[40%] lg:block lg:scale-90'
+                className='mt-16 hidden lg:absolute lg:-right-[450px] lg:-top-[20%] lg:block lg:scale-90'
                 src='./images/illustration-editor-desktop.svg'
               />
             </figure>
@@ -45,7 +45,7 @@ export default function Home() {
               <h3 className='mx-auto mb-8 max-w-[15ch] text-2xl font-bold text-primary-dark-blue lg:mx-0 lg:max-w-none'>
                 Introducing an extensible editor
               </h3>
-              <p>
+              <p className='text-neutral-dark-grayish-blue'>
                 Blogr features an exceedingly intuitive interface which lets you
                 focus on one thing: creating content. The editor supports
                 management of multiple blogs and allows easy manipulation of
@@ -58,7 +58,7 @@ export default function Home() {
               <h3 className='mb-8 text-2xl font-bold text-primary-dark-blue'>
                 Robust content management
               </h3>
-              <p>
+              <p className='text-neutral-dark-grayish-blue'>
                 Flexible content management enables users to easily move through
                 posts. Increase the usability of your blog by adding customized
                 categories, sections, format, or flow. With this functionality,
@@ -111,7 +111,7 @@ export default function Home() {
             <h3 className='mb-8 text-2xl font-bold text-primary-dark-blue'>
               Free, open, simple
             </h3>
-            <p>
+            <p className='text-neutral-dark-grayish-blue'>
               Blogr is a free and open source application backed by a large
               community of helpful developers. It supports features such as code
               syntax highlighting, RSS feeds, social media integration,
@@ -124,7 +124,7 @@ export default function Home() {
             <h3 className='mb-8 text-2xl font-bold text-primary-dark-blue'>
               Powerful tooling
             </h3>
-            <p>
+            <p className='text-neutral-dark-grayish-blue'>
               Batteries included. We built a simple and straightforward CLI tool
               that makes customization and deployment a breeze, but capable of
               producing even the most complicated sites.

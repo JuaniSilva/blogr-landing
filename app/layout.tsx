@@ -5,7 +5,7 @@ import './globals.css';
 const overpassFont = Overpass({
   subsets: ['latin'],
   variable: '--font-overpass',
-  weight: ['300', '600'],
+  weight: ['300', '600', '700'],
 });
 
 const ubuntuFont = Ubuntu({

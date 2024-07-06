@@ -29,6 +29,7 @@ const config: Config = {
       },
       fontSize: {
         '3xl': ['2rem', '2.5rem'],
+        'heading-1': ['clamp(1.75rem, 7.5vw, 3.575rem)', '3rem'],
         'heading-2': ['clamp(1.5rem, 5vw, 2.875rem)', '2.5rem'],
       },
       backgroundImage: {

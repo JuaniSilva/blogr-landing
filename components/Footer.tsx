@@ -19,7 +19,7 @@ export default function Footer({
             {navItems.map((item) => {
               return (
                 <li key={item.key} className='lg:flex-1'>
-                  <span>{item.label}</span>
+                  <span className='font-bold'>{item.label}</span>
                   <ul className='mt-10 space-y-2 text-neutral-grayish-blue'>
                     {item.subItems.map((subItem) => (
                       <li key={subItem.key} className='hover:underline'>
