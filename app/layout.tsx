@@ -1,11 +1,17 @@
 import type { Metadata } from 'next';
-import { Overpass } from 'next/font/google';
+import { Overpass, Ubuntu } from 'next/font/google';
 import './globals.css';
 
 const overpassFont = Overpass({
   subsets: ['latin'],
   variable: '--font-overpass',
   weight: ['300', '600'],
+});
+
+const ubuntuFont = Ubuntu({
+  subsets: ['latin'],
+  variable: '--font-ubuntu',
+  weight: ['300', '500', '700'],
 });
 
 export const metadata: Metadata = {
@@ -20,7 +26,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${overpassFont.className} bg-white`}>{children}</body>
+      <body
+        className={`${overpassFont.variable} ${ubuntuFont.variable} bg-white`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

@@ -17,8 +17,10 @@ export default function Button({
   const variants = {
     primary:
       'bg-gradient-to-r from-gradient-light-red to-gradient-red text-white',
-    secondary: 'bg-white text-primary-red',
-    outline: 'border border-white bg-transparent text-white',
+    secondary:
+      'bg-white text-primary-red hover:bg-primary-light-red hover:text-white',
+    outline:
+      'border border-white bg-transparent text-white hover:bg-white hover:text-primary-light-red',
     ghost: '',
   };
   const buttonWidth = fullWidth ? 'w-full' : 'w-fit';
@@ -26,7 +28,7 @@ export default function Button({
   return (
     <button
       className={cn(
-        'rounded-full px-10 py-3 font-bold',
+        'rounded-full px-10 py-3 font-bold transition-colors',
         buttonWidth,
         variants[variant],
         className

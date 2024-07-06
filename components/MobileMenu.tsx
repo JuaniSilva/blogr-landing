@@ -4,10 +4,9 @@ import HamburguerIcon from './HamburguerIcon';
 import CloseIcon from './CloseIcon';
 import Button from './Button';
 import { navItems } from '@/lib/navItems';
-import ArrowIcon from './ArrowIcon';
 import { cn } from '@/lib/utils';
 
-export default function MobileMenu() {
+export default function MobileMenu({ className }: { className?: string }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState<string | null>(null);
 
@@ -16,7 +15,7 @@ export default function MobileMenu() {
   }
 
   return (
-    <div>
+    <div className={className}>
       <button onClick={() => setIsOpen((val) => !val)}>
         {isOpen ? <CloseIcon /> : <HamburguerIcon />}
       </button>
@@ -34,7 +33,8 @@ export default function MobileMenu() {
                 onClick={() => toggleMenu(item.key)}
               >
                 {item.label}
-                <ArrowIcon
+                <img
+                  src='/images/icon-arrow-dark.svg'
                   className={cn(
                     'transition-all',
                     selectedMenu === item.key ? 'rotate-180' : 'rotate-0'
@@ -44,7 +44,7 @@ export default function MobileMenu() {
               <div
                 data-state={selectedMenu === item.key ? 'open' : 'closed'}
                 className={cn(
-                  'bg-nav-menu text-nav-menu-text grid w-full grid-rows-[0fr] rounded transition-all',
+                  'grid w-full grid-rows-[0fr] rounded bg-nav-menu text-nav-menu-text transition-all',
                   selectedMenu === item.key && 'mt-6 grid grid-rows-[1fr] py-7'
                 )}
               >
